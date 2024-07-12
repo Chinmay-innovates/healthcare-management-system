@@ -147,8 +147,15 @@ export const RegisterForm = ({
                                         defaultValue={field.value}
                                     >
                                         {GenderOptions.map((option, i) => (
-                                            <div key={option + i} className="radio-group">
-                                                <RadioGroupItem value={option} id={option} />
+                                            <div
+                                                key={option + i}
+                                                className="radio-group"
+                                            >
+                                                <RadioGroupItem
+                                                    value={option}
+                                                    id={option}
+                                                    key={i}
+                                                />
                                                 <Label htmlFor={option} className="cursor-pointer">
                                                     {option}
                                                 </Label>

@@ -151,23 +151,26 @@ export const AppointmentForm = ({
                             placeholder="Select a doctor"
                         >
                             {Doctors.map((doctor, i) => (
-                            <div className="p-2">
-                                <SelectItem key={doctor.name + i} value={doctor.name} className="bg-[#2C3539] rounded-full">
-                                    <div className="flex cursor-pointer items-center gap-2">
-                                        <Image
-                                            src={doctor.image}
-                                            width={32}
-                                            height={32}
-                                            alt="doctor"
-                                            className="rounded-full border border-dark-500"
-                                        />
+                                <div className="p-2">
+                                    <SelectItem
+                                        key={doctor.name + i}
+                                        value={doctor.name}
+                                        className="bg-[#2C3539] rounded-full">
+                                        <div className="flex cursor-pointer items-center gap-2">
+                                            <Image
+                                                src={doctor.image}
+                                                width={32}
+                                                height={32}
+                                                alt="doctor"
+                                                className="rounded-full border border-dark-500"
+                                            />
 
-                                        <p>{doctor.name}</p>
+                                            <p>{doctor.name}</p>
 
-                                    </div>
-                                </SelectItem>
-                            </div>
-                        ))}
+                                        </div>
+                                    </SelectItem>
+                                </div>
+                            ))}
                         </CustomFormField>
 
                         <CustomFormField
